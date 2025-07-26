@@ -103,7 +103,7 @@ Figure 13. Star image plot of the best image, which had no hexapod motion.
 Images with large hexapod motions while exposing.
 =============================================================
 
-We are seeing many images where the hexapod motions during exposure are much larger than intended. During the week from 2025-07-16 to 2025-07-23, there were XX images (this notebook is still running, but I believe it will be much more than 20 images) flagged for this issue.  Figures 14 and 15 show one of these images.  Also Figure 16 show the event timeline for this image.  Since there are many hexapod motions occurring during the exposure by design, it is hard to tell which ones are much larger than intended.
+We are seeing many images where the hexapod motions during exposure are much larger than intended. During the week from 2025-07-16 to 2025-07-23, there were 22 images flagged for this issue.  Figures 14 and 15 show one of these images, and I have plots of all of them.  Also Figure 16 show the event timeline for this image.  Since there are many hexapod motions occurring during the exposure by design, it is hard to tell which ones are much larger than intended.
 
 .. image:: ./_static/lsstcam_mount_2025-07-18_000166.png
 	   
