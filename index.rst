@@ -117,6 +117,53 @@ Figure 15. Witness detector from the image with large hexapod motions.
 
 Figure 16. Event timeline plot from the image with large hexapod motions.  You can see in the lower right that there are many events where the hexapod is moving (by design) so it is hard to tell when it is moving more than intended.
 
+It was thought that these events might be due to equipment faults.  To test this, I looked in more detail at two of the events, as shown in Figures 17 and 18.  Below each figure is a time line of events.  The one in Figure 17 did have a fault, but it occurred 40 seconds after the image.  The one in Figure 18 had no faults within faults +/- 4 minutes of the image in MTMount, MTPtg, MTAOS, MTHexapod, or MTCamera.  So it appears that faults are not an explanation. 
+
+.. image:: ./_static/Large_Motions_M2_X_2025071600177.png
+
+Figure 17. Large hexapod motion fail 2025071600177, looking at just M2 hexapod X motion.  The motions are clearly being commanded. A fault occurred on this image, but it occurred 40 seconds after the end of the image.
+
+.. code-block:: text
+
+		[100346] - [Done] - [TrackTargetAndTakeImageLSSTCam]
+		band_filter: g_6 - This is the last g_6 image – seqNum 176
+		2025-07-17T00:03:52.127488 - SeqNum 176 shutter open from Butler 
+		2025-07-17T00:04:23.08 - INFO - Setting final state to <ScriptState.DONE: 8> 
+		2025-07-17T00:04:23.058000 - SeqNum 176 shutter close from Butler 
+
+		[100347] - [Done] - [TrackTargetAndTakeImageLSSTCam]
+		band_filter: i_39 - This is the first  i_39 image – seqNum 177
+		2025-07-17T00:06:13.82 - INFO - Filter i_39 in position. 
+		2025-07-17T00:06:23.392409 -  SeqNum 177 shutter open from Butler 
+		2025-07-17T00:06:54.35 - INFO - Setting final state to <ScriptState.DONE: 8>
+		2025-07-17T00:06:54.323000 - SeqNum 177 shutter close from Butler 
+
+		[100348] - [Failed] - [TrackTargetAndTakeImageLSSTCam]
+		2025-07-17T00:07:36.06 - WARN - mthexapod_2 not in <State.ENABLED: 2>: <State.FAULT: 3> 
+		2025-07-17 00:07:36.051410+00:00 – M2Hex enters fault state from EFD. 
+
+
+
+.. image:: ./_static/Large_Motions_M2_X_2025071600479.png
+
+Figure 18. Large hexapod motion fail 2025071600479, looking at just M2 hexapod X motion.  The motions are clearly being commanded.  No faults were found for this image.
+
+.. code-block:: text
+
+		[100695] - [Done] - [TrackTargetAndTakeImageLSSTCam] 
+		band_filter: r_57 - This is the last r_57 image – seqNum 478
+		2025-07-17T06:34:52.152644 - SeqNum 478 shutter open from Butler 
+		2025-07-17T06:35:23.14 - INFO  - Setting final state to <ScriptState.DONE: 8> 
+		2025-07-17T06:35:23.094000 - SeqNum 478 shutter close from Butler 
+
+		[100696] - [Done] - [TrackTargetAndTakeImageLSSTCam] 
+		band_filter: u_24 - This is the first  u_24 image – seqNum 479
+		2025-07-17T06:37:20.15 - INFO  - Filter u_24 in position.
+		2025-07-17T06:37:25.480076 -  SeqNum 479  shutter open from Butler 
+		2025-07-17T06:38:04.43 - INFO  - Setting final state to <ScriptState.DONE: 8> 
+		2025-07-17T06:38:04.411000 - SeqNum 479 shutter close from Butler 
+
+
 Summary
 ====================
 
